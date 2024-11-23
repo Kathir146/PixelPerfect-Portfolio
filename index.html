@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gokul | RealEstate Graphic Designer</title>
+
+    <!--Stylesheet-->
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+
+    <!--Favicon-->
+    <link href="src/img/logo.png" rel="icon" style="width: 400%" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link href="assets/LeagueSpartan-VariableFont_wght.ttf" rel="stylesheet" /> -->
+    <!--Font Awesome Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!--Bootstrap 5-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  </head>
+  <body>
+    <!--Home-->
+    <header id="header">
+      <nav id="navbar" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Toggler Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="container">
+        <div class="row">
+          <div class="title-name">
+            <h3><b>Hi there!</b></h3>
+            <h1>I'm <span>Gokul</span></h1>
+            <p class="sub-text">
+              I'm a <b>Graphic Designer</b> with a focus on enhancing real
+              estate images With expertise in transforming property photos into
+              visually stunning representations,highlights the best features.
+            </p>
+          </div>
+          <a href="#portfolio" type="button" class="button">View Gallery</a>
+        </div>
+      </div>
+    </section>
+    <!--About-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="image--container">
+              <img
+                src="./src/img/working-image.jpg"
+                alt="working-image"
+                class="work-image"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 about">
+            <h2>About My Works</h2>
+            <div class="about-content">
+              "As a skilled graphic designer, I specialize in enhancing real
+              estate images for international clients. My focus is on delivering
+              visually captivating and polished visuals that elevate property
+              presentations, ensuring every image stands out with professional
+              quality tailored to global standards.I help clients create
+              compelling visuals that resonate with their target audience. My
+              goal is to bring out the best in every property, ensuring it looks
+              its absolute finest."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------------Portfolio----------------------->
+    <section id="portfolio">
+      <div class="container">
+        <h1>Visual Gallery</h1>
+        <p>A showcase of creativity and detail</p>
+        <div class="portfolio-section">
+          <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterImages('all')">
+              All
+            </button>
+            <button class="filter-btn" onclick="filterImages('indoor')">
+              Indoor
+            </button>
+            <button class="filter-btn" onclick="filterImages('outdoor')">
+              Outdoor
+            </button>
+          </div>
+
+          <!-- Portfolio images -->
+          <div class="portfolio-grid">
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/1.webp"
+                alt="Indoor Image 1"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/1.webp"
+                alt="Outdoor Image 1"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/2.webp"
+                alt="Indoor Image 2"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/2.webp"
+                alt="Outdoor Image 2"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/3.webp"
+                alt="Indoor Image 3"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/3.webp"
+                alt="Outdoor Image 3"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/4.webp"
+                alt="Indoor Image 4"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/4.webp"
+                alt="Outdoor Image 4"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/5.webp"
+                alt="Indoor Image 5"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/5.webp"
+                alt="Outdoor Image 5"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/6.webp"
+                alt="Indoor Image 6"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/6.webp"
+                alt="Outdoor Image 6"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/7.webp"
+                alt="Indoor Image 7"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/7.webp"
+                alt="Outdoor Image 7"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/8.webp"
+                alt="Indoor Image 8"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/8.webp"
+                alt="Outdoor Image 8"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/9.webp"
+                alt="Indoor Image 9"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/9.webp"
+                alt="Outdoor Image 9"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item indoor">
+              <img
+                data-src="./src/img/HDR Indoor/10.webp"
+                alt="Indoor Image 10"
+                class="lazy-image"
+              />
+            </div>
+            <div class="portfolio-item outdoor">
+              <img
+                data-src="./src/img/HDR OutDoor/10.webp"
+                alt="Outdoor Image 10"
+                class="lazy-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------------------------------Contact-------------------------------------------->
+
+    <section id="contact">
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            I’d love to hear from you. Let’s create something amazing!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <i class="fa-solid fa-location-dot icon"></i>
+
+              <p>24/5 Muniyapan Nagar,Pallipalayam,Namakkal</p>
+            </div>
+            <div class="information">
+              <i class="fa-solid fa-envelope icon"></i>
+
+              <p>gokulkrishnan0429@gmail.com</p>
+            </div>
+            <div class="information">
+              <i class="fa-solid fa-phone icon"></i>
+
+              <p>+91 9080759637</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="mailto:gokulkrishnan0429@gmail.com"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+              <a href="https://instagram.com/pixel_perfect_infotech">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www/linkedin.com/in/gokul-periyasamy-00a483339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xnnqzlvy" method="post">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" required />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" required />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" required />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+            <!-- <button type="submit" class="btn">Send</button> -->
+          </form>
+          <div class="alert d-flex align-items-center" role="alert">
+            <button class="btn--close-alert">&times;</button>
+
+            <div class="alert-text">
+              <h3>
+                <i
+                  class="fa-solid fa-circle-check"
+                  style="padding: 10px; color: yellow; font-size: 20px"
+                ></i
+                >Thank You!
+              </h3>
+              Your message has been received.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="copyright">
+      <p>
+        <span
+          ><i class="fa-regular fa-copyright" style="color: #ffffff"></i></span
+        >Copyright 2024 - Developed by
+        <span style="color: yellow">Kathirvel T</span>
+      </p>
+    </div>
+    <!---->
+    <div class="help-button">
+      <a href="https://wa.me/919080759637"
+        >Wanna Chat? <i class="fab fa-whatsapp"></i
+      ></a>
+    </div>
+  </body>
+</html>

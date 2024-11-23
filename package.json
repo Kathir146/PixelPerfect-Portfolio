@@ -1,0 +1,15 @@
+{
+  "name": "pixelperfect-portfolio",
+  "version": "1.0.0",
+  "description": "Real-Estate Graphic Designer Portfolio",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Kathirvel T",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.0"
+  }
+}
