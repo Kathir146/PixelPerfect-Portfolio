@@ -66,13 +66,13 @@ nav ul li a.active {
   color: #111 !important;
 }
 
-@media (max-width: 700px) {
-  nav img {
-    width: 13%;
-  }
+@media (max-width: 396px) {
   .nav-link {
-    text-align: right;
+    text-align: center;
     /* border-top: 1px solid #001; */
+  }
+  nav ul li {
+    margin: 0 20px;
   }
   .navbar .navbar-toggler {
     width: 50px;
@@ -147,12 +147,12 @@ nav ul li a.active {
   height: 20px;
   bottom: 30%;
 }
-@media (max-width: 480px) {
+@media (max-width: 396px) {
   #home h1 {
     color: #fff;
     font-size: 45px;
     font-weight: 500;
-    margin-left: 30%;
+    margin-left: 26%;
   }
   .sub-text {
     color: #fff;
@@ -163,13 +163,13 @@ nav ul li a.active {
     margin-right: 0px;
   }
   .title-name h3 {
-    margin-left: 43%;
+    margin-left: 41%;
   }
   .button {
     position: absolute;
     font-size: 13px;
     font-weight: bold;
-    left: 40%;
+    left: 38%;
     margin-top: 25px;
     text-decoration: none;
     padding: 10px 16px;
@@ -243,16 +243,16 @@ nav ul li a.active {
   opacity: 100%;
   transition: 0.4s ease-in-out;
 }
-@media (max-width: 700px) {
+@media (max-width: 396px) {
   #about {
     padding-top: 30px;
   }
   .about h2 {
     text-align: left;
     font-weight: 700;
-    padding-left: 30%;
+    padding-left: 26%;
     padding-right: 10px;
-    padding-top: 65%;
+    padding-top: 68%;
   }
   #about h2::after {
     content: "";
@@ -261,7 +261,7 @@ nav ul li a.active {
     height: 4px;
     width: 70px;
     margin: 10px auto 15px;
-    margin-right: 58%;
+    margin-right: 50%;
   }
   .about .about-content {
     line-height: 35px;
@@ -281,9 +281,9 @@ nav ul li a.active {
 
   .work-image {
     position: absolute;
-    margin-right: 0%;
+    margin-left: 11%;
     margin-top: 0%;
-    width: 80%;
+    width: 65%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
   }
@@ -383,7 +383,7 @@ nav ul li a.active {
 .hidden {
   display: none;
 }
-@media (max-width: 480px) {
+@media (max-width: 396px) {
   #portfolio h1 {
     color: #fff;
     font-size: 40px;
@@ -403,11 +403,14 @@ nav ul li a.active {
     padding-bottom: 20px;
   }
   .portfolio-section {
-    padding: 5px;
+    padding: 2px;
   }
-  .portfolio.grid {
+  .portfolio-item {
+    width: 25%;
+  }
+  /* .portfolio.grid {
     margin-left: 3%;
-  }
+  } */
   .filter-buttons {
     margin-bottom: 30px;
   }
@@ -715,7 +718,7 @@ textarea.input {
   padding: 2px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 396px) {
   .form {
     grid-template-columns: 1fr;
   }
@@ -743,7 +746,10 @@ textarea.input {
     transform: scale(0.9) translate(-40%, 30%);
     right: 50%;
   }
-
+  ::placeholder {
+    background-color: transparent;
+    color: #fff;
+  }
   .text {
     margin: 1rem 0 1.5rem 0;
   }
@@ -760,11 +766,12 @@ textarea.input {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 396px) {
   .container {
-    padding: 1.5rem;
+    padding: 1rem;
   }
   .form {
+    max-width: 890px;
     z-index: 10;
   }
   .contact-info:before {
@@ -778,7 +785,7 @@ textarea.input {
 
   form,
   .contact-info {
-    padding: 1.7rem 1.6rem;
+    padding: 1.5rem 1rem;
   }
 
   .text,
@@ -798,15 +805,15 @@ textarea.input {
   }
 
   .icon {
-    width: 23px;
+    width: 21px;
   }
 
   .input {
-    padding: 0.45rem 1.2rem;
+    padding: 0.35rem 1rem;
   }
 
   .btn {
-    padding: 0.45rem 1.2rem;
+    padding: 0.35rem 1rem;
   }
 }
 
@@ -842,11 +849,11 @@ textarea.input {
   transform: scale(0.9);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 480px) {
+@media (max-width: 396px) {
   .help-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 80px;
     z-index: 1000;
     background: yellow;
     color: #fff;
