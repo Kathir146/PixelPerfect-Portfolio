@@ -163,7 +163,7 @@ inputs.forEach((input) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Select the submit button by className
-  const submitButton = document.querySelector(".btn");
+  const submitButton = document.querySelector(".btn-submit");
   const alertMessage = document.querySelector(".alert");
   const btnClose = document.querySelector(".btn--close-alert");
   const formData = document.querySelector(".form-data");
@@ -171,10 +171,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add an event listener to the submit button
   submitButton.addEventListener("click", function (event) {
     event.preventDefault();
-
+    console.log("checked");
     // Show an alert message
     alertMessage.classList.remove("hide");
-    formData.reset();
+    // formData.reset();
   });
 
   btnClose.addEventListener("click", function (e) {
