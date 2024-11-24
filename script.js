@@ -91,24 +91,24 @@ document.addEventListener("DOMContentLoaded", function () {
 //Portfolio buttons
 
 ///Lazy Loading
-document.addEventListener("DOMContentLoaded", function () {
-  const lazyImages = document.querySelectorAll(".lazy-image");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const lazyImages = document.querySelectorAll(".lazy-image");
 
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src; // Load the actual image
-        img.onload = () => img.classList.add("loaded"); // Add loaded class
-        observer.unobserve(img); // Stop observing
-      }
-    });
-  });
+//   const imageObserver = new IntersectionObserver((entries, observer) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         const img = entry.target;
+//         img.src = img.dataset.src; // Load the actual image
+//         img.onload = () => img.classList.add("loaded"); // Add loaded class
+//         observer.unobserve(img); // Stop observing
+//       }
+//     });
+//   });
 
-  lazyImages.forEach((img) => {
-    imageObserver.observe(img);
-  });
-});
+//   lazyImages.forEach((img) => {
+//     imageObserver.observe(img);
+//   });
+// });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter images by category
