@@ -147,33 +147,22 @@ nav ul li a.active {
   height: 20px;
   bottom: 30%;
 }
-@media (max-width: 700px) {
-  #home h1 span::after {
-    content: "";
-    position: absolute;
-    left: 0%;
-    height: 100%;
-    width: fit-content;
-    background: #eee;
-    border-left: 2px solid yellow;
-    animation: typing 1.5s steps(10) forwards, cursor 1s infinite alternate;
-  }
+@media (max-width: 480px) {
   #home h1 {
     color: #fff;
     font-size: 45px;
     font-weight: 500;
-    text-align: center;
+    margin-left: 30%;
   }
   .sub-text {
     color: #fff;
     font-size: 12px;
     font-weight: 300;
-    padding: 5px;
+    padding: 8px;
     text-align: center;
-    margin-right: 50px;
+    margin-right: 0px;
   }
   .title-name h3 {
-    text-align: center;
     margin-left: 43%;
   }
   .button {
@@ -256,14 +245,14 @@ nav ul li a.active {
 }
 @media (max-width: 700px) {
   #about {
-    padding-top: 40px;
+    padding-top: 30px;
   }
   .about h2 {
     text-align: left;
     font-weight: 700;
-    padding-left: 32%;
+    padding-left: 30%;
     padding-right: 10px;
-    padding-top: 63%;
+    padding-top: 65%;
   }
   #about h2::after {
     content: "";
@@ -272,14 +261,14 @@ nav ul li a.active {
     height: 4px;
     width: 70px;
     margin: 10px auto 15px;
-    margin-right: 61%;
+    margin-right: 58%;
   }
   .about .about-content {
     line-height: 35px;
-    padding: 20px 30px 30px 30px;
+    padding: 20px;
     text-align: center;
-    justify-content: space-evenly;
-    font-size: 16px;
+    justify-content: space-between;
+    font-size: 14px;
     font-weight: 300;
   }
   .image--container {
@@ -287,12 +276,13 @@ nav ul li a.active {
     position: relative;
     width: 500px;
     height: auto;
+    margin-left: -16%;
   }
 
   .work-image {
     position: absolute;
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-right: 0%;
+    margin-top: 0%;
     width: 80%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
@@ -393,11 +383,10 @@ nav ul li a.active {
 .hidden {
   display: none;
 }
-@media (max-width: 700px) {
+@media (max-width: 480px) {
   #portfolio h1 {
     color: #fff;
-    text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
   }
   #portfolio h1::after {
@@ -407,23 +396,24 @@ nav ul li a.active {
     height: 4px;
     width: 100px;
     margin: 10px auto 15px;
-    margin-right: 40%;
+    margin-right: 38%;
   }
   #portfolio p {
-    text-align: center;
     color: #fff;
+    padding-bottom: 20px;
   }
   .portfolio-section {
-    padding: 30px;
-    text-align: center;
+    padding: 5px;
   }
-
+  .portfolio.grid {
+    margin-left: 3%;
+  }
   .filter-buttons {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .filter-btn {
-    padding: 8px 17px;
+    padding: 8px 15px;
     border: none;
     background-color: transparent;
     border: 1px solid yellow;
@@ -460,7 +450,7 @@ nav ul li a.active {
 }
 
 .contact-form {
-  background: linear-gradient(rgba(12, 14, 22, 0.7), rgba(12, 14, 22, 0.7));
+  background: linear-gradient(rgb(52, 51, 38), rgba(52, 51, 38));
   position: relative;
 }
 
@@ -585,8 +575,9 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background: linear-gradient(rgba(12, 14, 22, 0.7), rgba(12, 14, 22, 0.7));
   top: 50%;
+  background: linear-gradient(rgb(52, 51, 38), rgba(52, 51, 38));
+
   transform: translateY(-50%);
 }
 
@@ -760,13 +751,22 @@ textarea.input {
   .social-media {
     padding: 1.5rem 0 0 0;
   }
+  .copyright {
+    font-size: 11px;
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2f311e;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
     padding: 1.5rem;
   }
-
+  .form {
+    z-index: 10;
+  }
   .contact-info:before {
     display: none;
   }
@@ -842,7 +842,7 @@ textarea.input {
   transform: scale(0.9);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 700px) {
+@media (max-width: 480px) {
   .help-button {
     position: fixed;
     bottom: 20px;
@@ -853,8 +853,8 @@ textarea.input {
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding: 8px 15px;
-    font-size: 12px;
+    padding: 8px 14px;
+    font-size: 11px;
     font-weight: bold;
     transition: all 0.3s ease;
   }
@@ -865,7 +865,7 @@ textarea.input {
   }
   .help-button a i {
     color: #111;
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 /*--------------------------Custom ScrollBar----------------------*/
