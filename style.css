@@ -222,7 +222,7 @@ nav ul li a.active {
   font-weight: 300;
   padding-bottom: 10px;
 }
-.image--container {
+.image--box {
   padding: 10px;
   position: relative;
   width: 500px;
@@ -271,19 +271,18 @@ nav ul li a.active {
     font-size: 14px;
     font-weight: 300;
   }
-  .image--container {
+  .image--box {
     padding: 10px;
     position: relative;
-    width: 500px;
+    width: 370px;
     height: auto;
-    margin-left: -16%;
   }
 
   .work-image {
     position: absolute;
-    margin-left: 11%;
+    left: -6%;
     margin-top: 0%;
-    width: 65%;
+    width: 80%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
   }
