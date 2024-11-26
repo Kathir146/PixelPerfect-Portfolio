@@ -8,6 +8,7 @@
   position: sticky;
   z-index: 1000;
   top: 0%;
+  background: #000;
 }
 nav {
   width: 100%;
@@ -31,7 +32,7 @@ nav ul li {
   margin: 0 25px;
 }
 nav ul li a {
-  color: white;
+  color: white !important;
   text-decoration: none;
   padding: 5px;
   transition: color 0.3s ease;
@@ -50,7 +51,7 @@ nav ul li a.active {
   font-weight: bold;
 }
 .navbar .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 100, 220, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   width: 1.7em;
   height: 1.7em;
 }
@@ -62,13 +63,13 @@ nav ul li a.active {
 } */
 .bgColor {
   transition: all 0.5s;
-  background: linear-gradient(#000000b6, #000000b6) !important;
-  color: #111 !important;
+  background: linear-gradient(#000000a6, #00000099) !important;
+  color: #fff !important;
 }
 
 @media (max-width: 396px) {
   .nav-link {
-    text-align: center;
+    text-align: left;
     /* border-top: 1px solid #001; */
   }
   nav ul li {
@@ -121,22 +122,22 @@ nav ul li a.active {
   text-align: left;
 }
 
-.button {
-  position: absolute;
+.btn-gallery {
+  position: relative;
   font-size: 15px;
   font-weight: bold;
   margin-top: 25px;
   text-decoration: none;
-  padding: 13px 20px;
+  padding: 11px 20px;
   background-color: yellow;
   color: #111;
   border-radius: 23px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.button:hover {
+.btn-gallery:hover {
   background: rgb(232, 232, 66); /* Darker blue */
-  transform: scale(0.9); /* Slightly enlarges the button */
+  transform: scale(0.9); /* Slightly enlarges the btn-gallery */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 .laptop {
@@ -148,6 +149,9 @@ nav ul li a.active {
   bottom: 30%;
 }
 @media (max-width: 396px) {
+  #home {
+    background-position: center;
+  }
   #home h1 {
     color: #fff;
     font-size: 45px;
@@ -165,7 +169,7 @@ nav ul li a.active {
   .title-name h3 {
     margin-left: 41%;
   }
-  .button {
+  .btn-gallery {
     position: absolute;
     font-size: 13px;
     font-weight: bold;
@@ -179,7 +183,12 @@ nav ul li a.active {
     cursor: pointer;
     transition: 0.3s ease-in-out;
   }
-  .button:hover {
+  .btn-gallery:hover {
+    background: rgb(232, 232, 66); /* Darker blue */
+    transform: scale(0.9); /* Slightly enlarges the btn-gallery */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  .btn-gallery:active {
     background: rgb(232, 232, 66); /* Darker blue */
     transform: scale(0.9); /* Slightly enlarges the button */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
@@ -198,7 +207,6 @@ nav ul li a.active {
 .about h2 {
   text-align: left;
   font-weight: 700;
-  padding-left: 50%;
   padding-right: 10px;
   padding-top: 50px;
 }
@@ -215,7 +223,6 @@ nav ul li a.active {
   padding-top: 20px;
   line-height: 35px;
   padding-right: 10px;
-  padding-left: 50%;
   text-align: left;
   justify-content: center;
   font-size: 18px;
@@ -231,8 +238,7 @@ nav ul li a.active {
 
 .work-image {
   position: absolute;
-  margin-left: 15%;
-  margin-top: 10%;
+  margin-top: 8%;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -261,7 +267,7 @@ nav ul li a.active {
     height: 4px;
     width: 70px;
     margin: 10px auto 15px;
-    margin-right: 50%;
+    margin-right: 51%;
   }
   .about .about-content {
     line-height: 35px;
@@ -280,7 +286,7 @@ nav ul li a.active {
 
   .work-image {
     position: absolute;
-    left: -6%;
+    left: 9%;
     margin-top: 0%;
     width: 80%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -311,14 +317,15 @@ nav ul li a.active {
   height: 4px;
   width: 100px;
   margin: 10px auto 15px;
-  margin-right: 47%;
+  margin-right: 45%;
 }
 #portfolio p {
   text-align: center;
   color: #fff;
 }
 .portfolio-section {
-  padding: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -370,14 +377,6 @@ nav ul li a.active {
 
 .portfolio-item:hover {
   transform: scale(1.05);
-}
-.lazy-image {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.lazy-image.loaded {
-  opacity: 1;
 }
 .hidden {
   display: none;
@@ -441,7 +440,7 @@ nav ul li a.active {
 .form {
   width: 100%;
   max-width: 890px;
-  max-height: 120%;
+  max-height: 70%;
   background-color: rgb(161, 161, 85);
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
@@ -468,7 +467,7 @@ nav ul li a.active {
 }
 
 form {
-  padding: 2.3rem 2.2rem;
+  padding: 2.3rem 2.2rem 0rem 2.2rem;
   z-index: 10;
   overflow: hidden;
   position: relative;
@@ -615,7 +614,9 @@ textarea.input {
 }
 .alert {
   position: absolute;
-  padding: 25px 45px;
+  top: 2%;
+  margin: 0rem 4rem;
+  padding: 6px 20px;
 }
 .alert.d-flex.align-items-center {
   background-color: #00000094;
@@ -718,6 +719,9 @@ textarea.input {
 }
 
 @media (max-width: 396px) {
+  #contact {
+    padding: 3rem;
+  }
   .form {
     grid-template-columns: 1fr;
   }
@@ -754,7 +758,7 @@ textarea.input {
   }
 
   .social-media {
-    padding: 1.5rem 0 0 0;
+    padding: 1rem 0 0 0;
   }
   .copyright {
     font-size: 11px;
@@ -851,8 +855,8 @@ textarea.input {
 @media (max-width: 396px) {
   .help-button {
     position: fixed;
-    bottom: 40px;
-    right: 80px;
+    bottom: 20px;
+    right: 10px;
     z-index: 1000;
     background: yellow;
     color: #fff;
@@ -864,7 +868,16 @@ textarea.input {
     font-weight: bold;
     transition: all 0.3s ease;
   }
-
+  .help-button:hover {
+    background: rgb(232, 232, 66);
+    transform: scale(0.9);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  .help-button:active {
+    background: rgb(232, 232, 66);
+    transform: scale(0.9);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
   .help-button a {
     text-decoration: none;
     color: #111;

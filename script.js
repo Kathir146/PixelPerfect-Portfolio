@@ -184,3 +184,11 @@ document.addEventListener("DOMContentLoaded", function () {
     alertMessage.classList.add("hide");
   });
 });
+/////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".portfolio-item img");
+  images.forEach((img) => {
+    const preloadImg = new Image();
+    preloadImg.src = img.src;
+  });
+});
