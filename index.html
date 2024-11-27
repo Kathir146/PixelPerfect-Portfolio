@@ -46,12 +46,26 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!--Animation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
   <body>
+    <div class="preloader" id="preloader">
+      <div class="loading-container">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+
     <!--Home-->
     <header id="header">
       <nav id="navbar" class="navbar navbar-expand-lg">
         <div class="container-fluid">
+          <a href="index.html" class="navbar-brand"
+            ><img src="src/img/G.png" width="40px"
+          /></a>
           <!-- Toggler Button -->
           <button
             class="navbar-toggler"
@@ -115,13 +129,13 @@
               <img
                 src="./src/img/working-image.jpg"
                 alt="working-image"
-                class="work-image"
+                class="work-image reveal"
               />
             </div>
           </div>
           <div class="col-md-6 about">
-            <h2>About My Works</h2>
-            <div class="about-content">
+            <h2 class="reveal">About My Works</h2>
+            <div class="about-content reveal">
               "As a skilled graphic designer, I specialize in enhancing real
               estate images for international clients. My focus is on delivering
               visually captivating and polished visuals that elevate property
@@ -138,10 +152,10 @@
     <!-------------------------------Portfolio----------------------->
     <section id="portfolio">
       <div class="container">
-        <h1>Visual Gallery</h1>
-        <p>A showcase of creativity and detail</p>
+        <h1 class="reveal">Visual Gallery</h1>
+        <p class="reveal">A showcase of creativity and detail</p>
         <div class="portfolio-section">
-          <div class="filter-buttons">
+          <div class="filter-buttons reveal">
             <button class="filter-btn active" onclick="filterImages('all')">
               All
             </button>
@@ -225,14 +239,14 @@
     <!---------------------------------Contact-------------------------------------------->
 
     <section id="contact">
-      <div class="form">
+      <div class="form reveal">
         <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
-          <p class="text">
+          <h3 class="title reveal">Let's get in touch</h3>
+          <p class="text reveal">
             I’d love to hear from you. Let’s create something amazing!
           </p>
 
-          <div class="info">
+          <div class="info reveal">
             <div class="information">
               <i class="fa-solid fa-location-dot icon"></i>
 
@@ -251,8 +265,8 @@
           </div>
 
           <div class="social-media">
-            <p>Connect with us :</p>
-            <div class="social-icons">
+            <p class="reveal">Connect with us :</p>
+            <div class="social-icons reveal">
               <a
                 href="https://www.facebook.com/profile.php?id=61565671952630&mibextid=ZbWKwL"
               >
@@ -275,8 +289,8 @@
 
         <div class="contact-form">
           <form action="https://formspree.io/f/xnnqzlvy" method="post">
-            <h3 class="title">Contact us</h3>
-            <div class="input-container">
+            <h3 class="title reveal">Contact us</h3>
+            <div class="input-container reveal">
               <input type="text" name="name" class="input" required />
               <label for="">Username</label>
               <span>Username</span>
@@ -322,9 +336,13 @@
     <div class="copyright">
       <p>
         <span
-          ><i class="fa-regular fa-copyright" style="color: #ffffff"></i></span
+          ><i class="fa-regular fa-copyright" style="color: #553131"></i></span
         >Copyright 2024 - Developed by
-        <span style="color: yellow">Kathirvel T</span>
+        <span style="color: yellow"
+          ><a href="https://kathirvel-portfolio.netlify.app"
+            >Kathirvel T</a
+          ></span
+        >
       </p>
     </div>
     <!---->

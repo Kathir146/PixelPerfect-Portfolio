@@ -1,5 +1,17 @@
 "use strict";
 
+//Preloader
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.getElementById("preloader");
+
+  // Simulate the 3-second delay
+  setTimeout(() => {
+    preloader.style.display = "none"; // Hide preloader
+    document.querySelector(".content").style.display = "block"; // Show content
+    document.body.classList.add("loaded"); // Restore scrolling
+  }, 3000);
+});
+
 //Change Navbar color on Scroll
 function changeBg() {
   let navbar = document.getElementById("navbar");
@@ -122,7 +134,7 @@ function filterImages(category) {
   }
 
   // Add 'active' class to clicked button
-  e.target.classList.add("active");
+  event.target.classList.add("active");
 
   // Loop through portfolio items
   for (let i = 0; i < items.length; i++) {
@@ -191,4 +203,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const preloadImg = new Image();
     preloadImg.src = img.src;
   });
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//About Section Animation
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Select all elements with the 'reveal' class
+gsap.utils.toArray(".reveal").forEach((element) => {
+  gsap.fromTo(
+    element,
+    { opacity: 0, y: 50 }, // Starting state
+    {
+      opacity: 1,
+      y: 0, // Ending state
+      duration: 1, // Animation duration
+      stagger: 0.2,
+      ease: "power2.out", // Easing function
+      scrollTrigger: {
+        trigger: element, // The element that triggers the animation
+        start: "top 85%", // When the top of the element is 85% of the viewport height
+        toggleActions: "play none none none", // Play animation on scroll
+      },
+    }
+  );
 });
