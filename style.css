@@ -24,7 +24,6 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   padding: 0;
   margin: 0;
 }
@@ -62,10 +61,12 @@ nav ul li a.active {
   scale: 1.1;
   transition: 0.4s ease-in;
 }
-/* 
-.hide-nav {
-  display: none;
-} */
+.navbar-brand img {
+  min-width: 20px;
+  max-width: 80px;
+  max-height: 50px;
+  margin-left: 30px;
+}
 .bgColor {
   transition: all 0.5s;
   background: linear-gradient(#000000a6, #00000099) !important;
@@ -140,9 +141,11 @@ body {
   }
 }
 
+/* Restore scrollbar visibility when loading is complete */
 body.loaded {
-  overflow: auto; /* Restore scrolling after loading */
+  overflow: auto;
 }
+
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -383,9 +386,9 @@ body.loaded {
   background: yellow;
   display: block;
   height: 4px;
-  width: 100px;
+  width: 150px;
   margin: 10px auto 15px;
-  margin-right: 45%;
+  align-items: center;
 }
 #portfolio p {
   text-align: center;
@@ -905,12 +908,10 @@ textarea.input {
   z-index: 1000;
   background: yellow;
   color: #fff;
-  border-radius: 50px;
+  border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 12px 15px;
   transition: all 0.3s ease;
 }
 
@@ -920,7 +921,7 @@ textarea.input {
 }
 .help-button a i {
   color: #111;
-  font-size: 17px;
+  font-size: 27px;
 }
 /* Hover effect for button */
 .help-button:hover {
@@ -964,13 +965,13 @@ textarea.input {
   }
 }
 /*--------------------------Custom ScrollBar----------------------*/
-::-webkit-scrollbar {
-  width: 10px;
-}
 ::-webkit-scrollbar-track {
   background: linear-gradient(rgba(12, 14, 22, 0.7), rgba(12, 14, 22, 0.7));
 }
 ::-webkit-scrollbar-thumb {
   background: yellow;
   border-radius: 1px;
+}
+::-webkit-scrollbar {
+  width: 10px;
 }

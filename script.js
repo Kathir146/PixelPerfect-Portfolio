@@ -1,6 +1,5 @@
 "use strict";
 
-//Preloader
 document.addEventListener("DOMContentLoaded", () => {
   const preloader = document.getElementById("preloader");
 
