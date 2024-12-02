@@ -16,7 +16,7 @@ nav {
   top: 0;
   left: 0%;
   padding: 0 15px 15px 0;
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
   z-index: 10;
   transition: all 0.3s ease;
