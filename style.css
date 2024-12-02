@@ -65,7 +65,7 @@ nav ul li a.active {
   min-width: 20px;
   max-width: 80px;
   max-height: 50px;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 .bgColor {
   transition: all 0.5s;
@@ -170,7 +170,6 @@ body.loaded {
 #home h3 {
   color: #fff;
   font-weight: 300;
-  text-align: left;
   padding-bottom: 10px;
 }
 #home h1 {
@@ -238,7 +237,8 @@ body.loaded {
     margin-right: 0px;
   }
   .title-name h3 {
-    margin-left: 41%;
+    margin: 0;
+    text-align: center;
   }
   .btn-gallery {
     position: absolute;
@@ -961,7 +961,7 @@ textarea.input {
   }
   .help-button a i {
     color: #111;
-    font-size: 11px;
+    font-size: 20px;
   }
 }
 /*--------------------------Custom ScrollBar----------------------*/
