@@ -174,7 +174,6 @@ body.loaded {
 }
 #home h1 {
   color: #fff;
-  text-align: left;
   font-size: 80px;
   font-weight: 500;
   padding-bottom: 10px;
@@ -226,7 +225,7 @@ body.loaded {
     color: #fff;
     font-size: 45px;
     font-weight: 500;
-    margin-left: 26%;
+    text-align: center;
   }
   .sub-text {
     color: #fff;
@@ -244,7 +243,7 @@ body.loaded {
     position: absolute;
     font-size: 13px;
     font-weight: bold;
-    left: 38%;
+    transform: translateX(127px);
     margin-top: 25px;
     text-decoration: none;
     padding: 10px 16px;
@@ -475,7 +474,8 @@ body.loaded {
     padding: 2px;
   }
   .portfolio-item {
-    width: 25%;
+    padding: 0px 10px;
+    width: 100%;
   }
   /* .portfolio.grid {
     margin-left: 3%;
@@ -733,6 +733,7 @@ textarea.input {
 
 .icon {
   width: 28px;
+  margin-top: -4%;
   margin-right: 0.7rem;
 }
 

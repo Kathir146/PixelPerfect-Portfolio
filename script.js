@@ -100,53 +100,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 ///////////////////////////////////////////////////////////////////////////////////
 //Portfolio buttons
-
-///Lazy Loading
-// document.addEventListener("DOMContentLoaded", function () {
-//   const lazyImages = document.querySelectorAll(".lazy-image");
-
-//   const imageObserver = new IntersectionObserver((entries, observer) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         const img = entry.target;
-//         img.src = img.dataset.src; // Load the actual image
-//         img.onload = () => img.classList.add("loaded"); // Add loaded class
-//         observer.unobserve(img); // Stop observing
-//       }
-//     });
-//   });
-
-//   lazyImages.forEach((img) => {
-//     imageObserver.observe(img);
-//   });
-// });
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter images by category
 function filterImages(category) {
-  let items = document.getElementsByClassName("portfolio-item");
-  let buttons = document.getElementsByClassName("filter-btn");
+  const items = document.querySelectorAll(".portfolio-item");
+  const buttons = document.querySelectorAll(".filter-btn");
 
   // Loop through filter buttons to remove 'active' class
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].classList.remove("active");
-  }
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
 
-  // Add 'active' class to clicked button
-  event.target.classList.add("active");
+  // Add 'active' class to the clicked button
+  const clickedButton = document.querySelector(
+    `.filter-btn[onclick="filterImages('${category}')"]`
+  );
+  if (clickedButton) clickedButton.classList.add("active");
 
   // Loop through portfolio items
-  for (let i = 0; i < items.length; i++) {
+  items.forEach((item) => {
     if (category === "all") {
-      items[i].classList.remove("hidden");
+      item.classList.remove("hidden");
+    } else if (item.classList.contains(category)) {
+      item.classList.remove("hidden");
     } else {
-      if (items[i].classList.contains(category)) {
-        items[i].classList.remove("hidden");
-      } else {
-        items[i].classList.add("hidden");
-      }
+      item.classList.add("hidden");
     }
-  }
+  });
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
