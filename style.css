@@ -264,6 +264,53 @@ body.loaded {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
   }
 }
+@media (max-width: 780px) {
+  #home {
+    background-position: center;
+  }
+  #home h1 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .sub-text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 8px;
+    text-align: center;
+    margin-right: 0px;
+  }
+  .title-name h3 {
+    margin: 0;
+    text-align: center;
+  }
+  .btn-gallery {
+    position: absolute;
+    font-size: 13px;
+    font-weight: bold;
+    transform: translateX(150px);
+    margin-top: 25px;
+    text-decoration: none;
+    padding: 10px 16px;
+    background-color: yellow;
+    color: #111;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .btn-gallery:hover {
+    background: rgb(232, 232, 66); /* Darker blue */
+    transform: scale(0.9); /* Slightly enlarges the btn-gallery */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  .btn-gallery:active {
+    background: rgb(232, 232, 66); /* Darker blue */
+    transform: scale(0.9); /* Slightly enlarges the button */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+}
 /*---------------------------About----------------------------------*/
 #about {
   position: relative;
@@ -275,7 +322,6 @@ body.loaded {
   padding-top: 60px;
 }
 .about h2 {
-  text-align: left;
   font-weight: 700;
   padding-right: 10px;
   padding-top: 50px;
@@ -324,7 +370,7 @@ body.loaded {
     padding-top: 30px;
   }
   .about h2 {
-    text-align: left;
+    text-align: center;
     font-weight: 700;
     padding-left: 26%;
     padding-right: 10px;
@@ -358,7 +404,56 @@ body.loaded {
     position: absolute;
     left: 9%;
     margin-top: 0%;
-    width: 80%;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+}
+@media (max-width: 780px) {
+  #about {
+    padding-top: 70%;
+  }
+  .about {
+    flex: 0 0 auto;
+    width: 100%;
+    transform: translateY(-5%);
+    text-align: center;
+  }
+  .about h2 {
+    text-align: center;
+    font-weight: 700;
+    padding-left: 0%;
+    padding-right: 10px;
+  }
+  #about h2::after {
+    content: "";
+    background: yellow;
+    display: block;
+    height: 4px;
+    width: 70px;
+    margin: 10px auto 15px;
+    margin-right: 44%;
+  }
+  .about .about-content {
+    line-height: 35px;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .image--box {
+    padding: 10px;
+    position: relative;
+    width: 350px;
+    height: auto;
+  }
+
+  .work-image {
+    position: absolute;
+    left: 3%;
+    margin-top: -70%;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
   }
@@ -456,6 +551,51 @@ body.loaded {
     color: #fff;
     font-size: 40px;
     font-weight: 500;
+  }
+  #portfolio h1::after {
+    content: "";
+    background: yellow;
+    display: block;
+    height: 4px;
+    width: 100px;
+    margin: 10px auto 15px;
+    margin-right: 38%;
+  }
+  #portfolio p {
+    color: #fff;
+    padding-bottom: 20px;
+  }
+  .portfolio-section {
+    padding: 2px;
+  }
+  .portfolio-item {
+    padding: 0px 10px;
+    width: 100%;
+  }
+  /* .portfolio.grid {
+    margin-left: 3%;
+  } */
+  .filter-buttons {
+    margin-bottom: 50px;
+  }
+
+  .filter-btn {
+    padding: 8px 15px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid yellow;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 780px) {
+  #portfolio h1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 0%;
   }
   #portfolio h1::after {
     content: "";
@@ -900,6 +1040,113 @@ textarea.input {
   }
 }
 
+@media (max-width: 780px) {
+  #contact {
+    padding-top: 40px;
+    padding: 3rem;
+  }
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .alert {
+    position: absolute;
+    top: 2%;
+    margin: 0rem 1rem;
+  }
+  .contact-info:before {
+    bottom: initial;
+    top: -75px;
+    right: 65px;
+    transform: scale(0.95);
+  }
+
+  .contact-form:before {
+    top: -13px;
+    left: initial;
+    right: 70px;
+  }
+
+  .square {
+    transform: translate(140%, 43%);
+    height: 350px;
+  }
+
+  .big-circle {
+    bottom: 75%;
+    transform: scale(0.9) translate(-40%, 30%);
+    right: 50%;
+  }
+  ::placeholder {
+    background-color: transparent;
+    color: #fff;
+  }
+  .text {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .social-media {
+    padding: 1rem 0 0 0;
+  }
+  .copyright {
+    font-size: 11px;
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2f311e;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    padding: 1rem;
+  }
+  .form {
+    max-width: 890px;
+    z-index: 10;
+  }
+  .contact-info:before {
+    display: none;
+  }
+
+  .square,
+  .big-circle {
+    display: none;
+  }
+
+  form,
+  .contact-info {
+    padding: 1.5rem 1rem;
+  }
+
+  .text,
+  .information,
+  .social-media p {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.15rem;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .icon {
+    width: 21px;
+  }
+
+  .input {
+    padding: 0.35rem 1rem;
+  }
+
+  .btn {
+    padding: 0.35rem 1rem;
+  }
+}
+
 /*/////////////////////////////////////////////////////////////////////*/
 /* Sticky Help Button */
 .help-button {
@@ -931,6 +1178,41 @@ textarea.input {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 396px) {
+  .help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 1000;
+    background: yellow;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .help-button:hover {
+    background: rgb(232, 232, 66);
+    transform: scale(0.9);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  .help-button:active {
+    background: rgb(232, 232, 66);
+    transform: scale(0.9);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  .help-button a {
+    text-decoration: none;
+    color: #111;
+  }
+  .help-button a i {
+    color: #111;
+    font-size: 20px;
+  }
+}
+@media (max-width: 780px) {
   .help-button {
     position: fixed;
     bottom: 20px;
