@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter images by category
 function filterImages(event, category) {
-  let items = document.querySelectorAll("portfolio-item");
-  let buttons = document.querySelectorAll("filter-btn");
+  let items = document.querySelectorAll(".portfolio-item");
+  let buttons = document.querySelectorAll(".filter-btn");
 
   // Loop through filter buttons to remove 'active' class
   for (let i = 0; i < buttons.length; i++) {
