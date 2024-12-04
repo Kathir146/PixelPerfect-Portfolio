@@ -102,31 +102,35 @@ document.addEventListener("DOMContentLoaded", function () {
 //Portfolio buttons
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter images by category
-function filterImages(event, category) {
-  let items = document.querySelectorAll(".portfolio-item");
-  let buttons = document.querySelectorAll(".filter-btn");
+function filterImages(category) {
+  const items = document.querySelectorAll(".portfolio-item");
+  const buttons = document.querySelectorAll(".filter-btn");
 
   // Loop through filter buttons to remove 'active' class
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].classList.remove("active");
-  }
+  buttons.forEach((button) => button.classList.remove("active"));
 
-  // Add 'active' class to clicked button
-  event.target.classList.add("active");
+  // Add 'active' class to the clicked button
+  const clickedButton = [...buttons].find(
+    (btn) => btn.getAttribute("onclick") === `filterImages('${category}')`
+  );
+  if (clickedButton) {
+    clickedButton.classList.add("active");
+  } else {
+    console.error(`No button found for category: ${category}`);
+  }
 
   // Loop through portfolio items
-  for (let i = 0; i < items.length; i++) {
+  items.forEach((item) => {
     if (category === "all") {
-      items[i].classList.remove("hidden");
+      item.classList.remove("hidden");
+    } else if (item.classList.contains(category)) {
+      item.classList.remove("hidden");
     } else {
-      if (items[i].classList.contains(category)) {
-        items[i].classList.remove("hidden");
-      } else {
-        items[i].classList.add("hidden");
-      }
+      item.classList.add("hidden");
     }
-  }
+  });
 }
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //Contact Form
 const inputs = document.querySelectorAll(".input");
