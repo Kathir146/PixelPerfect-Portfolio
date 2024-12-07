@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Simulate the 3-second delay
   setTimeout(() => {
     preloader.style.display = "none"; // Hide preloader
-    document.querySelector(".content").style.display = "block"; // Show content
+    // document.querySelector(".content").style.display = "block"; // Show content
     document.body.classList.add("loaded"); // Restore scrolling
-  }, 3000);
+  }, 2000);
 });
 
 //Change Navbar color on Scroll
@@ -113,6 +113,8 @@ function filterImages(category) {
   const clickedButton = [...buttons].find(
     (btn) => btn.getAttribute("onclick") === `filterImages('${category}')`
   );
+  console.log(`Filtering category: ${category}`);
+
   if (clickedButton) {
     clickedButton.classList.add("active");
   } else {
