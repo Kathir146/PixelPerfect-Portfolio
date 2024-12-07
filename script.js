@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Portfolio buttons
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter images by category
-function filterImages(category) {
+window.filterImages = function (category) {
   const items = document.querySelectorAll(".portfolio-item");
   const buttons = document.querySelectorAll(".filter-btn");
 
@@ -131,7 +131,7 @@ function filterImages(category) {
       item.classList.add("hidden");
     }
   });
-}
+};
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //Contact Form
